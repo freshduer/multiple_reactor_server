@@ -3,18 +3,17 @@
 
 class Epoll;
 class Channel;
-class EventLoop
-{
-private:
-    Epoll *ep;
-    bool quit;
-public:
-    EventLoop();
-    ~EventLoop();
+class EventLoop {
+ private:
+  Epoll *ep;
+  bool quit;
 
-    void loop();
-    void updateChannel(Channel*);
+ public:
+  EventLoop();
+  ~EventLoop();
 
-    void addThread(std::function<void()>);
+  void loop();
+  void updateChannel(Channel *);
+
+  void addThread(std::function<void()>);
 };
-
