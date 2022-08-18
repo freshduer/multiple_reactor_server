@@ -1,3 +1,4 @@
-.cmake*
 .venv
 .git
+.idea
+/cmake-build-release/
